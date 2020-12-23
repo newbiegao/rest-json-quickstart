@@ -22,6 +22,7 @@ public class LegumeResource {
         legumes.add(new Legume("Zucchini", "Summer squash"));
     }
 
+
     @GET
     public Response list() {
         return Response.ok(legumes).build();
