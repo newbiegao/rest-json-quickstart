@@ -12,7 +12,8 @@ public class LegumeResourceTest {
 
         given().when().get("/legumes")
                 .then().statusCode(200)
-                .body(is("[{\"name\":\"Carrot\",\"description\":\"Root vegetable, usually orange\"},{\"name\":\"Zucchini\",\"description\":\"Summer squash\"}]")) ;
+                .body(is("[{\"name\":\"Carrot\",\"description\":\"Root vegetable, usually orange\"},{\"name\":\"Zucchini\",\"description\":\"Summer squash\"}]"))
+                .body("[0].name" , is("Carrot"));
     }
 
 }
