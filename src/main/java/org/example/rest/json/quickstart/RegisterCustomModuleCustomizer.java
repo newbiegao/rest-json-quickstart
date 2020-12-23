@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 @Singleton
 public class RegisterCustomModuleCustomizer  implements ObjectMapperCustomizer{
 
+    @Override
     public void customize(ObjectMapper mapper) {
         mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL) ;
     }
